@@ -8,7 +8,7 @@ import project6 from "../images/sug.jpeg";
 
 const Portfolio = () => {
   const projects = [
-    { img: project1, title: "Portfolio Website", desc: "Responsive portfolio using React", link: "https://poojabadade122.github.io/My-PortFolio/" },
+    { img: project1, title: "Portfolio Website", desc: "Responsive portfolio using React", link: "http://reactportfolio1-five.vercel.app" },
     { img: project2, title: "Diabetes Prediction", desc: "ML based diabetes prediction system", link: "#" },
     { img: project3, title: "Smart Water Purification", desc: "React system for water anomaly detection", link: "#" },
     { img: project4, title: "ID card Mnagement", desc: "PHP based Project to create dynamic ID cards", link: "#" },
