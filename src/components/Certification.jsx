@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 
-// Certificate images / PDFs
-import cert1 from "../images/power.jpg"; 
-import cert2 from "../images/tcs1.jpg"; 
-import cert3 from "../assets/psc.pdf"; 
-import cert4 from "../assets/irjmets.pdf"; 
+// ===== Certificate images / PDFs =====
+import cert1 from "../images/power.jpg";
+import cert2 from "../images/tcs1.jpg";
+import cert3 from "../assets/psc.pdf";
+import cert4 from "../assets/irjmets.pdf";
 
-// Activity images
+// ===== Activity images =====
 import udaanImg from "../images/u.jpg";
-import suryadattaImg from "../images/ss.jpg"; // NEW IMAGE
+import suryadattaImg from "../images/ss.jpg";
 
-// Logos of issuers
+// ===== Logos =====
 import logoMicrosoft from "../images/mp.jpeg";
 import logoTCS from "../images/t1.png";
 import logoNPTEL from "../images/np.png";
 import logoVIOSA from "../images/v.png";
-
-// Activity logo (college / fest logo)
 import collegeLogo from "../images/as.jpg";
 
-// Your personal logo for heading
+// ===== Heading logo =====
 import myLogo from "../images/c.jpeg";
 
 const Certifications = () => {
@@ -28,41 +26,38 @@ const Certifications = () => {
   const certifications = [
     {
       title: "PL-300: Microsoft Power BI",
-      year: "2025",
-      img: cert1,
+      subtitle: "2025",
+      file: cert1,
       logo: logoMicrosoft
     },
     {
       title: "TCS iON Career Edge: Young Professional",
-      year: "2023",
-      img: cert2,
+      subtitle: "2023",
+      file: cert2,
       logo: logoTCS
     },
     {
       title: "Software Testing (NPTEL SWAYAM)",
-      year: "2024",
-      img: cert3,
+      subtitle: "2024",
+      file: cert3,
       logo: logoNPTEL
     },
     {
       title: "Corporate Mentorship Program",
-      year: "2024",
-      img: cert4,
+      subtitle: "2024",
+      file: cert4,
       logo: logoVIOSA
     },
-
-    /* ===== ACTIVITIES ===== */
-
     {
       title: "Udaan – Intercollegiate Fest (Natya Street Play)",
-      year: "Performer / Team Member",
-      img: udaanImg,
+      subtitle: "Performer / Team Member",
+      file: udaanImg,
       logo: collegeLogo
     },
     {
       title: "Suryadatta TechFest",
-      year: "Participant / Presenter",
-      img: suryadattaImg,
+      subtitle: "Participant / Presenter",
+      file: suryadattaImg,
       logo: collegeLogo
     }
   ];
@@ -70,7 +65,7 @@ const Certifications = () => {
   return (
     <section className="certifications" id="certifications">
       <h2 className="cert-heading">
-        <img src={myLogo} alt="My Logo" className="heading-logo" />
+        <img src={myLogo} alt="Logo" className="heading-logo" />
         Certifications & Activities
       </h2>
 
@@ -79,27 +74,26 @@ const Certifications = () => {
           <div
             key={index}
             className="cert-card"
-            onClick={() => setSelectedCert(cert.img)}
+            onClick={() => setSelectedCert(cert.file)}
           >
-            <img src={cert.logo} alt="Logo" className="cert-logo" />
+            <img src={cert.logo} alt="Issuer Logo" className="cert-logo" />
             <h3>{cert.title}</h3>
-            <span>{cert.year}</span>
+            <span>{cert.subtitle}</span>
           </div>
         ))}
       </div>
 
-      {/* Modal / Lightbox */}
+      {/* ===== Modal ===== */}
       {selectedCert && (
         <div className="cert-modal" onClick={() => setSelectedCert(null)}>
           {selectedCert.endsWith(".pdf") ? (
             <iframe
               src={selectedCert}
               title="Certificate PDF"
-              width="90%"
-              height="90%"
-            ></iframe>
+              frameBorder="0"
+            />
           ) : (
-            <img src={selectedCert} alt="Certificate / Activity" />
+            <img src={selectedCert} alt="Certificate" />
           )}
         </div>
       )}
