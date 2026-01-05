@@ -599,26 +599,25 @@ html {
   text-align: center;
 }
 
-/* Heading with logo */
-.certifications .cert-heading {
+/* ===== Heading ===== */
+.cert-heading {
   font-size: 2rem;
   color: #1f2328;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px; /* space between logo and text */
+  gap: 15px;
 }
 
-/* Logo image in heading */
 .heading-logo {
-  width: 55px;       /* adjust size as needed */
-  height: 86px;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
-  border-radius: 50%; /* optional: circular logo */
+  border-radius: 50%;
 }
 
-/* Container for all certificate cards */
+/* ===== Card container ===== */
 .cert-container {
   display: flex;
   flex-wrap: wrap;
@@ -626,61 +625,59 @@ html {
   gap: 25px;
 }
 
-/* Individual certificate card */
+/* ===== Card ===== */
 .cert-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px 15px;
-  width: 250px;
+  background: #ffffff;
+  width: 260px;
+  padding: 25px 18px;
+  border-radius: 16px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Hover effect for card */
 .cert-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Issuer logo inside the card */
+/* ===== Logo ===== */
 .cert-logo {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   background: #fff;
+  display: block;
 }
 
-/* Certificate title */
+/* ===== Text ===== */
 .cert-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #1f2328;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-/* Certificate year */
 .cert-card span {
-  background: #1f2328;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 20px;
+  display: block;
   font-size: 0.85rem;
+  padding: 6px 16px;
+  background: #1f2328;
+  color: #ffffff;
+  border-radius: 20px;
 }
 
-/* Modal / Lightbox */
+/* ===== Modal ===== */
 .cert-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -689,11 +686,16 @@ html {
   cursor: pointer;
 }
 
-/* Modal content: image or PDF */
 .cert-modal img,
 .cert-modal iframe {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cert-modal iframe {
+  width: 80%;
+  height: 85%;
 }
