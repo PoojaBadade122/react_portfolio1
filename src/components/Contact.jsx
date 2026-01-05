@@ -26,7 +26,7 @@ const Contact = () => {
     <section className="contact" id="contact">
       <div className="contact-box">
         <div className="contact-image">
-          <img src="/src/images/cm2.jpg" alt="contact" />
+          <img src="/src/images/cm.jpeg" alt="contact" />
         </div>
 
         <div className="contact-form-wrapper">
