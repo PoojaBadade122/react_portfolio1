@@ -13,7 +13,7 @@ const Portfolio = () => {
     { img: project3, title: "Smart Water Purification", desc: "React system for water anomaly detection", link: "#" },
     { img: project4, title: "ID card Mnagement", desc: "PHP based Project to create dynamic ID cards", link: "#" },
     { img: project5, title: "Sugarcane disease detection", desc: "ML/AI system to detect sugarcane diseases", link: "#" },
-    { img: project6, title: "Tech Meets Tradition", desc: "Reseach Project ('Published In IRJMETS Journal')", link: "#" },
+    { img: project6, title: "Tech Meets Tradition", desc: "Reseach Project ('Published In IRJMETS Journal')", link: "https://doi.org/10.56726/IRJMETS86999" },
 
   ];
 
